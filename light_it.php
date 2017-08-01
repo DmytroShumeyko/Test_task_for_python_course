@@ -5,15 +5,8 @@
  * Date: 8/1/2017
  * Time: 1:20 PM
  */
-function validateBitcoinAddress()
+function validateBitcoinAddress($addresses)
 {
-    //prepare array with addresses
-    $addresses = [
-        "1AGNa15ZQXAZUgFiqJ2i7Z2DPU2J6hW62i",
-        "1AGNa15ZQXAZUgFiqJ2i7Z2DPU2J6hW62I",
-        "1AGNa15ZQXAZUgFiqJ2i7Z2DPU2J6hW62iToLongAddress",
-        "1AGNa15ZQXAZUgFiqJ2i7Z2DPU2J6hW62Y",
-    ];
     //check one by one
     foreach ($addresses as $address) {
         $message = "Address is valid!";
@@ -76,6 +69,12 @@ function decode58($input)
 
     return $result;
 }
-
+//prepare array with addresses
+$addresses = [
+    "1AGNa15ZQXAZUgFiqJ2i7Z2DPU2J6hW62i",
+    "1AGNa15ZQXAZUgFiqJ2i7Z2DPU2J6hW62I",
+    "1AGNa15ZQXAZUgFiqJ2i7Z2DPU2J6hW62iToLongAddress",
+    "1AGNa15ZQXAZUgFiqJ2i7Z2DPU2J6hW62Y",
+];
 //run script
-validateBitcoinAddress();
+validateBitcoinAddress($addresses);
